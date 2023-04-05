@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<gx-model type="entity.PASPolicy" xmlns="http://guidewire.com/gx">
+  <includes>
+    <include path="EffectiveFrom" type="java.util.Date" propertyInclusionType="NORMAL"/>
+    <include path="EffectiveTo" type="java.util.Date" propertyInclusionType="NORMAL"/>
+    <include path="EndorsementForms[].Description" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="EndorsementForms[].FormNumber" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Persons[].First" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Persons[].Last" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Persons[].PASAddress.PublicID" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Persons[].PolicyRoles[].PolicyRole" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Persons[].SSN" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PolicyCoverages[].CoverageName" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PolicyCoverages[].Deductible" type="java.lang.Integer" propertyInclusionType="NORMAL"/>
+    <include path="PolicyCoverages[].LimitPerIncident" type="java.lang.Integer" propertyInclusionType="NORMAL"/>
+    <include path="PolicyCoverages[].LimitPerYear" type="java.lang.Integer" propertyInclusionType="NORMAL"/>
+    <include path="PolicyHolder" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PolicyNumber" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PolicyType" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PrimaryAddress.City" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PrimaryAddress.PostalCode" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PrimaryAddress.State" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PrimaryAddress.StreetLine1" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="PublicID" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].Color" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].Make" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].Model" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].VehicleCoverages[].CoverageName" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].VehicleCoverages[].Deductible" type="java.lang.Integer" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].VehicleCoverages[].LimitPerIncident" type="java.lang.Integer" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].VehicleCoverages[].LimitPerYear" type="java.lang.Integer" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].VIN" type="java.lang.String" propertyInclusionType="NORMAL"/>
+    <include path="Vehicles[].Year" type="java.lang.String" propertyInclusionType="NORMAL"/>
+  </includes>
+</gx-model>

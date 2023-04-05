@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" entity="PASLocation" table="paslocation" desc="Legacy system location" type="retireable" exportable="true">
+  <foreignkey name="PASPolicy" columnName="PASPolicyID" fkentity="PASPolicy" desc="Related policy" nullok="true"/>
+  <foreignkey name="PASAddress" columnName="PASAddressID" fkentity="PASAddress" desc="Related address" nullok="true"/>
+  <column name="Description" type="varchar" desc="Description" nullok="true">
+    <columnParam name="size" value="60"/>
+  </column>
+  <array name="LocationCoverages" arrayentity="PASCoverage" desc="Location coverages"/>
+</entity>

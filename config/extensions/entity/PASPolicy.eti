@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<entity xmlns="http://guidewire.com/datamodel" entity="PASPolicy" table="paspolicy" desc="Legacy system policy" type="retireable" exportable="true">
+  <column name="PolicyNumber" type="varchar" desc="Unique policy number" nullok="true">
+    <columnParam name="size" value="40"/>
+  </column>
+  <column name="PolicyType" type="varchar" desc="Type of policy" nullok="true">
+    <columnParam name="size" value="20"/>
+  </column>
+  <column name="EffectiveFrom" type="datetime" desc="Date from which policy is effective" nullok="true"/>
+  <column name="EffectiveTo" type="datetime" desc="Date until which policy is effective" nullok="true"/>
+  <column name="PolicyHolder" type="varchar" desc="Name of policy holder" nullok="true">
+    <columnParam name="size" value="40"/>
+  </column>
+  <foreignkey name="PrimaryAddress" columnName="PrimaryID" fkentity="PASAddress" desc="Policy address" nullok="true"/>
+  <array name="Persons" arrayentity="PASPerson" desc="Persons"/>
+  <array name="Locations" arrayentity="PASLocation" desc="Locations"/>
+  <array name="Vehicles" arrayentity="PASVehicle" desc="Vehicles"/>
+  <array name="PolicyCoverages" arrayentity="PASCoverage" desc="Policy coverages"/>
+  <array name="EndorsementForms" arrayentity="PASEndorsementForm" desc="Endorsement forms"/>
+</entity>

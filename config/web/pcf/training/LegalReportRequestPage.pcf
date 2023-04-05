@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    id="LegalReportRequestPage"
+    title="&quot;Legal Report Requests&quot;">
+    <Screen>
+      <Toolbar/>
+      <ListViewPanel>
+        <RowIterator
+          editable="true"
+          elementName="currentRequest"
+          value="allLegalReportRequests()"
+          valueType="gw.api.database.IQueryBeanResult&lt;LegalReportRequest&gt;">
+          <Row>
+            <TextCell
+              id="MessageID"
+              label="&quot;Message ID&quot;"
+              value="currentRequest.MessageID"/>
+            <TextCell
+              id="ContactID"
+              label="&quot;Contact ID&quot;"
+              value="currentRequest.ContactID"/>
+            <TextCell
+              id="ContactInfo"
+              label="&quot;Contact Info&quot;"
+              value="currentRequest.ContactInfo"/>
+            <BooleanRadioCell
+              align="left"
+              id="Processed"
+              label="&quot;Processed?&quot;"
+              value="currentRequest.Processed"/>
+            <!-- <Cell
+              id="WhenProcessed"
+              label="&quot;When Processed?&quot;"
+              value="whenProcessed(currentRequest)"/> -->
+          </Row>
+        </RowIterator>
+      </ListViewPanel>
+    </Screen>
+    <Code><![CDATA[function allLegalReportRequests() : gw.api.database.IQueryBeanResult<entity.LegalReportRequest> {
+  var queryObj = gw.api.database.Query.make(LegalReportRequest)
+  return queryObj.select()
+}
+
+function whenProcessed (aRequest : LegalReportRequest) : String {
+  if (aRequest.Processed) {
+    return aRequest.UpdateTime.toString()
+  } else {
+    return "n/a"
+  }
+  
+}]]></Code>
+  </Page>
+</PCF>

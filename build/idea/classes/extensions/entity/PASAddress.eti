@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+  <entity entity="PASAddress" table="pasaddress" desc="Legacy system policy address" type="retireable"
+					exportable="true" xmlns="http://guidewire.com/datamodel">
+	<column name="StreetLine1" type="varchar" desc="Street Line 1" nullok="true" >
+		<columnParam name="size" value="60"/>
+	</column>
+	<column name="StreetLine2" type="varchar" desc="Street Line 2" nullok="true" >
+		<columnParam name="size" value="60"/>
+	</column>
+	<column name="City" type="varchar" desc="City" nullok="true" >
+		<columnParam name="size" value="60"/>
+	</column>
+		<column name="State" type="varchar" desc="State" nullok="true" >
+		<columnParam name="size" value="2"/>
+	</column>
+	<column name="PostalCode" type="varchar" desc="Postal code" nullok="true" >
+		<columnParam name="size" value="60"/>
+	</column>
+	<column name="Country" type="varchar" desc="Country" nullok="true" >
+		<columnParam name="size" value="2"/>
+	</column>
+  </entity>

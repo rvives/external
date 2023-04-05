@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Contains-Sources: true
+Maven-Coordinates: ExternalApp.modules:configuration:jar::10.0.0
+

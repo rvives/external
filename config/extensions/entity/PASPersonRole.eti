@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+  
+  <entity entity="PASPersonRole" table="paspersonrole" desc="Role for a legacy system policy person" type="retireable"
+          exportable="true" xmlns="http://guidewire.com/datamodel">
+    <foreignkey name="PASPerson" columnName="PASPersonID" fkentity="PASPerson" desc="Related person" nullok="true"/>
+	<column name="PolicyRole" type="varchar" desc="First name" nullok="true">
+		<columnParam name="size" value="30"/>
+	</column>
+  </entity>

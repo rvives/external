@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+  
+  <entity entity="PASEndorsementForm" table="pasendorsementform" desc="Legacy system endorsement form" type="retireable"
+					exportable="true" xmlns="http://guidewire.com/datamodel">
+    <foreignkey name="PASPolicy" columnName="PASPolicyID" fkentity="PASPolicy" desc="Related policy" nullok="true"/>
+	<column name="FormNumber" type="varchar" desc="Form Number" nullok="true">
+		<columnParam name="size" value="60"/>
+	</column>
+	<column name="Description" type="varchar" desc="Description" nullok="true">
+		<columnParam name="size" value="60"/>
+	</column>
+  </entity>

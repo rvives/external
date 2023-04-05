@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+  
+  <entity entity="PASVehicle" table="pasvehicle" desc="Legacy system vehicle" type="retireable"
+					exportable="true" xmlns="http://guidewire.com/datamodel">
+    <foreignkey name="PASPolicy" columnName="PASPolicyID" fkentity="PASPolicy" desc="Related policy" nullok="true"/>
+	<foreignkey name="PASAddress" columnName="PASAddressID" fkentity="PASAddress" desc="Related address" nullok="true"/>
+	<column name="VIN" type="varchar" desc="Vehicle identification number" nullok="true">
+		<columnParam name="size" value="30"/>
+	</column>
+	<column name="Color" type="varchar" desc="Vehicle color" nullok="true">
+		<columnParam name="size" value="30"/>
+	</column>
+	<column name="Year" type="varchar" desc="Vehicle year" nullok="true">
+		<columnParam name="size" value="30"/>
+	</column>	
+	<column name="Make" type="varchar" desc="Vehicle make" nullok="true">
+		<columnParam name="size" value="30"/>
+	</column>
+	<column name="Model" type="varchar" desc="Vehicle model" nullok="true">
+		<columnParam name="size" value="30"/>
+	</column>	
+	<array name="VehicleCoverages" arrayentity="PASCoverage" desc="Vehicle coverages"/>	
+  </entity>
